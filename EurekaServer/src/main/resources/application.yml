@@ -1,0 +1,62 @@
+server:
+  port: 5001
+  
+eureka:
+  instance:
+    hostname: localhost
+    
+  client:
+    fetch-registry: false
+    register-with-eureka: false 
+
+#---
+#
+#spring:
+#  profiles: eurekaone
+#  
+#server:#  port: 5002  
+#eureka:
+#  instance:
+#    hostname: eureka-primary
+#    appname: eone
+#    
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: false 
+#    service-url:#      defaultZone: http://eureka-secondary:5003/eureka,http://eureka-tertiary:5004/eureka  
+#      
+#---
+#
+#spring:
+#  profiles: eurekatwo
+#  
+#server:
+#  port: 5003  
+#eureka:
+#  instance:
+#    hostname: eureka-secondary
+#    appname: etwo
+#    
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: false 
+#    service-url:
+#      defaultZone: http://eureka-primary:5002/eureka,http://eureka-tertiary:5004/eureka    
+#      
+#---
+#
+#spring:
+#  profiles: eurekathree
+#  
+#server:
+#  port: 5004  
+#eureka:
+#  instance:
+#    hostname: eureka-tertiary
+#    appname: ethree
+#    
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: false 
+#    service-url:
+#      defaultZone: http://eureka-primary:5002/eureka,http://eureka-secondary:5003/eureka 
